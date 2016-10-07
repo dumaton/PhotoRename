@@ -10,7 +10,6 @@ dirPath = 'C:\\Users\\Артем\\Desktop\\tmp\\'
 
 #Директория со списком ЖК
 rootDir = os.listdir(dirPath)
-#print (rootDir)
 
 #Работа со списком ЖК
 for nameDir in rootDir:
@@ -31,15 +30,13 @@ for nameDir in rootDir:
 
         #Работа с фото корпуса
         for namePhoto in objFile:
-            j = j + 1
-            #print (namePhoto)
+            j += 1
             oldName = dirPath + nameDir + '\\' + nameObj + '\\' + namePhoto
             print (oldName)
             newName = dirResult + '\\Корпус ' + nameObj + ' (' + str(j) + ').jpg'
             print (newName)
             os.rename(oldName, newName)
             
-
     print ('\n')
 
 input ('Press any key')
